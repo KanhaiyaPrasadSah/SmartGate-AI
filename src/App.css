@@ -1,0 +1,155 @@
+/* ================= FORCE FULL SCREEN ================= */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #0f172a; /* This kills the white space */
+  overflow-x: hidden;
+}
+
+/* ================= LOGIN CONTAINER ================= */
+.login-container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers form on all screens */
+  padding: 20px;
+  /* Deep Blue/Black Gradient */
+  background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+}
+
+/* ================= LOGIN BOX ================= */
+.login-box {
+  width: 100%;
+  max-width: 400px;
+  background: rgba(30, 41, 59, 0.7); /* Translucent dark blue */
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.login-box h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+/* ================= INPUTS ================= */
+.login-box input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(15, 23, 42, 0.8);
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-sizing: border-box; /* Prevents input overflow */
+}
+
+.login-box input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background: #0f172a;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+/* ================= BUTTON ================= */
+.login-box button {
+  width: 100%;
+  padding: 15px;
+  border-radius: 12px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.login-box button:hover {
+  background: #3b82f6;
+  transform: translateY(-2px);
+}
+
+.login-box button:active {
+  transform: translateY(0);
+}
+
+/* ================= ERROR MESSAGE ================= */
+.error {
+  color: #f87171;
+  background: rgba(248, 113, 113, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid rgba(248, 113, 113, 0.2);
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* 💻 Big & Bold Laptop View Overrides */
+@media (min-width: 1024px) {
+  .login-box {
+    max-width: 520px;          /* Substantially increased width for a strong desktop feel */
+    padding: 55px 50px;        /* Deep internal padding to let elements breathe */
+    gap: 28px;                 /* Increased spacing between fields */
+    border-radius: 32px;       /* Sleeker, smoother corners for a larger box */
+  }
+
+  .login-box h2 {
+    font-size: 2.6rem;         /* Massive prominent branding title */
+    margin-bottom: 15px;
+  }
+
+  .login-box input {
+    padding: 18px 22px;        /* Tall, highly clickable input fields */
+    font-size: 18px;           /* Crisp, larger text for high resolution screens */
+    border-radius: 14px;
+  }
+
+  .login-box button {
+    padding: 18px;             /* Stouter, heavy-set action button */
+    font-size: 18px;           /* Large, bold text */
+    font-weight: 700;
+    border-radius: 14px;
+  }
+  
+  .error {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
+
+/* 📲 Tablets */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .login-box {
+    max-width: 380px;
+  }
+}
+
+/* 📱 Mobile */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 15px;
+  }
+  .login-box {
+    padding: 30px 20px;
+  }
+  .login-box h2 {
+    font-size: 1.5rem;
+  }
+}

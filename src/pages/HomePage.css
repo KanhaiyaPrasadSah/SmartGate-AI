@@ -1,0 +1,222 @@
+/* ================= GLOBAL ================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background: #f4f6f9;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* ================= CONTAINER ================= */
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================= MAIN LAYOUT ================= */
+
+.layout {
+  flex: 1;
+
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* ================= LEFT COLUMN ================= */
+
+.left-col {
+  flex: 1.4;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  min-width: 0;
+}
+
+/* ================= RIGHT COLUMN ================= */
+
+.right-col {
+  flex: 1;
+
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 0;
+
+  overflow: hidden;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* ================= EMPTY STATE ================= */
+
+.empty-state {
+  text-align: center;
+  color: #6b7280;
+  padding: 20px;
+}
+
+.empty-state p {
+  font-size: 15px;
+  margin-top: 12px;
+}
+
+/* ================= SCANNER ================= */
+
+.scanner-animation {
+  width: 90px;
+  height: 90px;
+
+  border: 5px solid #e5e7eb;
+  border-top: 5px solid #3b82f6;
+
+  border-radius: 50%;
+  margin: auto;
+
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ================= ERROR POPUP ================= */
+
+.error-popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+
+  background: #dc2626;
+  color: white;
+
+  padding: 14px 18px;
+  border-radius: 10px;
+
+  z-index: 9999;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+  max-width: 300px;
+}
+
+.error-popup p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.error-popup button {
+  margin-top: 10px;
+  background: white;
+  color: #111827;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ================= LAPTOP (IMPROVED) ================= */
+
+@media (min-width: 1200px) {
+  .layout {
+    max-width: 1400px;
+    margin: auto;
+  }
+
+  .right-col {
+    padding: 20px;
+  }
+
+  .empty-state p {
+    font-size: 16px;
+  }
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 900px) {
+  .layout {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .left-col {
+    flex: none;
+  }
+
+  .right-col {
+    min-height: 260px;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+  .layout {
+    padding: 10px;
+    gap: 12px;
+  }
+
+  .left-col {
+    gap: 12px;
+  }
+
+  .right-col {
+    padding: 12px;
+  }
+
+  .empty-state p {
+    font-size: 13px;
+  }
+
+  .scanner-animation {
+    width: 65px;
+    height: 65px;
+  }
+
+  .error-popup {
+    right: 10px;
+    left: 10px;
+    max-width: none;
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 400px) {
+  .layout {
+    padding: 8px;
+    gap: 10px;
+  }
+
+  .empty-state p {
+    font-size: 12px;
+  }
+
+  .scanner-animation {
+    width: 55px;
+    height: 55px;
+  }
+}

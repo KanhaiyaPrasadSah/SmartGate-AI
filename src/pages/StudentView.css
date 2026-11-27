@@ -1,0 +1,329 @@
+/* ================= MAIN CARD ================= */
+
+.profile-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px; /* Slightly more padding for a premium feel */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 560px;
+  transition: all 0.3s ease;
+  border: 1px solid #f1f5f9;
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= DEPARTMENT HEADER ================= */
+
+.dept-header {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 6px;
+  margin-top: 4px;
+  text-align: center;
+}
+
+.dept-title {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #64748b;
+  font-weight: 800;
+  display: block;
+}
+
+/* ================= PROFILE HEADER ================= */
+
+.profile-header {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  margin-bottom: 18px;
+  margin-top: 10px;
+}
+
+/* ================= IMAGE ================= */
+.clean-image {
+  width: 140px;
+  height: 180px;
+  border-radius: 10px;
+  background: #f1f5f9;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clean-fit {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  transition: 0.25s ease;
+}
+
+.clean-fit:hover {
+  transform: scale(1.02);
+}
+
+.placeholder-box {
+  color: #888;
+  font-size: 12px;
+}
+
+/* ================= STATUS ================= */
+
+.status-badge {
+  position: absolute;
+  bottom: 6px;
+  left: 6px;
+  padding: 3px 8px;
+  font-size: 10px;
+  border-radius: 16px;
+  font-weight: 600;
+  background: #00df9a;
+  color: white;
+}
+/* ================= TEXT ================= */
+.header-text h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e293b;
+}
+.sub-text {
+  font-size: 12px;
+  color: #64748b;
+  margin: 2px 0;
+}
+
+.branch-tag {
+  display: inline-block;
+  background: #e0f2fe;
+  color: #0284c7;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+.gender-field {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #334155;
+}
+/* ================= INFO GRID ================= */
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.info-item {
+  background: #f8fafc;
+  padding: 8px 12px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #f1f5f9;
+}
+
+.info-item label {
+  font-size: 9px;
+  color: #94a3b8;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.info-item span {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+/* ================= GMAIL ================= */
+
+.gmail-footer {
+  background: #f1f5f9;
+  padding: 8px 12px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.gmail-footer label {
+  font-size: 9px;
+  color: #64748b;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.gmail-footer p {
+  margin: 2px 0 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* ================= REMARKS (Single Line) ================= */
+
+.remarks-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.remarks-section label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #334155;
+}
+
+.remarks-input {
+  width: 100%;
+  height: 38px;
+  padding: 0 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 13px;
+  color: #1e293b;
+  outline: none;
+  background: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.remarks-input:focus:not(:read-only) {
+  border-color: #00df9a;
+  box-shadow: 0 0 0 3px rgba(0, 223, 154, 0.1);
+}
+
+.remarks-input:read-only {
+  background: #f8fafc;
+  border-color: transparent;
+  padding-left: 0;
+  font-weight: 500;
+  color: #64748b;
+}
+
+.btn-edit, .btn-cancel {
+  background: none;
+  border: none;
+  color: #2563eb;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-cancel { color: #dc2626; }
+
+.save-btn {
+  width: 100%;
+  padding: 10px;
+  background: #00df9a;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+/* ================= BACKLOGS ================= */
+
+.section-title {
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: #1e293b;
+  text-align: center;
+}
+
+.backlog-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.backlog-tile {
+  padding: 10px 5px;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.2s ease;
+}
+
+.backlog-tile small {
+  display: block;
+  font-size: 9px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.subject-name {
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.has-backlog {
+  background: #fff1f2;
+  color: #e11d48;
+  border: 1px solid #ffe4e6;
+}
+
+.no-backlog {
+  background: #f8fafc;
+  color: #94a3b8;
+  border: 1px solid #f1f5f9;
+}
+
+/* ================= UTILS ================= */
+
+.divider {
+  border: none;
+  border-top: 1px solid #f1f5f9;
+  margin: 16px 0;
+}
+
+.status-msg {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+.text-danger { color: #ef4444; }
+.text-success { color: #10b981; }
+.highlight-blue { color: #2563eb; }
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 480px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .backlog-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

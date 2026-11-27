@@ -1,0 +1,141 @@
+/* ================= HISTORY SECTION ================= */
+
+.history-section {
+  margin-top: 12px;
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* TITLE */
+
+.history-title {
+  margin: 0 0 8px 0;
+  font-size: 15px;
+  color: #111827;
+}
+
+/* ================= LIST ================= */
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  overflow-y: auto;
+  max-height: 40vh; /* adaptive */
+
+  padding-right: 4px;
+}
+
+/* SCROLLBAR */
+
+.history-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.history-list::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 6px;
+}
+
+/* ================= ITEM ================= */
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: #f9fafb;
+  padding: 8px 10px;
+  border-radius: 8px;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.history-item:hover {
+  background: #e5e7eb;
+}
+
+.history-item.active {
+  background: #dbeafe;
+  border: 1px solid #3b82f6;
+}
+
+/* ================= INFO ================= */
+
+.student-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.student-info strong {
+  font-size: 13px;
+  color: #111827;
+}
+
+.student-info span {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+/* ================= BUTTON ================= */
+
+.btn-voice {
+  background: #3b82f6;
+  border: none;
+  color: white;
+
+  font-size: 12px;
+  padding: 5px 8px;
+  border-radius: 6px;
+
+  cursor: pointer;
+}
+
+.btn-voice:hover {
+  opacity: 0.9;
+}
+
+/* ================= EMPTY ================= */
+
+.history-empty {
+  text-align: center;
+  font-size: 12px;
+  color: #9ca3af;
+  padding: 15px 0;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .history-list {
+    max-height: 35vh;
+  }
+
+  .student-info strong {
+    font-size: 12px;
+  }
+
+  .student-info span {
+    font-size: 10px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .history-list {
+    max-height: 30vh;
+  }
+
+  .btn-voice {
+    font-size: 11px;
+    padding: 4px 6px;
+  }
+}

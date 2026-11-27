@@ -1,0 +1,205 @@
+/* ================= GLOBAL ================= */
+.header {
+  width: 100%;
+  padding: 12px 20px;
+  background: #1f2937;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  gap: 12px;
+}
+
+/* ================= LEFT ================= */
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.logo-group h1 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.db-badge,
+.ai-badge {
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.db-badge {
+  background: #374151;
+}
+
+.ai-badge.green {
+  background: #16a34a;
+}
+
+.ai-badge.red {
+  background: #dc2626;
+}
+
+/* ================= CENTER ================= */
+.source-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 220px;
+}
+
+.source-picker select {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+.ip-controls {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.ip-controls input {
+  flex: 1;
+  min-width: 140px;
+  padding: 7px;
+  border-radius: 6px;
+  border: none;
+}
+
+/* ================= RIGHT ================= */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* ================= DATETIME ================= */
+.datetime-box {
+  font-size: 13px;
+  line-height: 1.4;
+  background: #374151;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+/* ================= BUTTON GROUP ================= */
+.header-controls {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* ================= BUTTON BASE ================= */
+button {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: 0.2s ease;
+  white-space: nowrap;
+}
+
+/* ================= BUTTON TYPES ================= */
+.btn-dashboard {
+  background: #2563eb;
+  color: white;
+}
+.btn-dashboard:hover {
+  background: #1d4ed8;
+}
+
+.btn-mode.free {
+  background: #16a34a;
+  color: white;
+}
+
+.btn-mode.busy {
+  background: #dc2626;
+  color: white;
+}
+
+.btn-secondary {
+  background: #6b7280;
+  color: white;
+}
+
+.btn-reset {
+  background: #f59e0b;
+  color: white;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* 💻 Large Screens (Laptop/Desktop) */
+@media (min-width: 1024px) {
+  .header {
+    flex-wrap: nowrap;
+  }
+
+  .source-picker {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .ip-controls {
+    flex-wrap: nowrap;
+  }
+}
+
+/* 📲 Tablet */
+@media (max-width: 1023px) {
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .source-picker {
+    width: 100%;
+  }
+
+  .right-section {
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+/* 📱 Mobile */
+@media (max-width: 600px) {
+  .logo-group h1 {
+    font-size: 18px;
+  }
+
+  .datetime-box {
+    font-size: 11px;
+    padding: 5px 8px;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+
+  .header-controls {
+    justify-content: flex-start;
+  }
+
+  .ip-controls {
+    flex-direction: column;
+  }
+
+  .ip-controls input {
+    width: 100%;
+  }
+}
